@@ -115,7 +115,14 @@ public class EmployeeView {
 
     public static void printEmployee(Employee employee) {
         PersonView.printPerson(employee);
-        System.out.println(", " + employee.getNumberEmployee());
+        if(employee.getNumberEmployee()<=10) {
+            System.out.print(", 000"+ employee.getNumberEmployee());
+        } else if (employee.getNumberEmployee()<=100) {
+            System.out.print(", 00"+ employee.getNumberEmployee());
+        } else if (employee.getNumberEmployee()<=1000) {
+            System.out.print(", 0"+ employee.getNumberEmployee());
+        }
+        else System.out.println(", " + employee.getNumberEmployee());
     }
 
     public static void printListEmployees(ArrayList<Employee> employees) {

@@ -28,6 +28,7 @@ public class Employee extends Person implements Serializable {
         }
     }
 
+
     private boolean validNumber(long number) {
         return number >= 0 && number <= 9999;
     }
