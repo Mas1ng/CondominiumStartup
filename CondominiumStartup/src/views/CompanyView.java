@@ -11,9 +11,10 @@ public class CompanyView {
         do {
             System.out.println("\nMenu Condominium");
             System.out.println("1 - Alterar dados Empresa");
+            System.out.println("2 - Menu Condominios");
             System.out.println("\n0 - Voltar");
             op = (int) GeneralView.getNumber("--->");
-        } while (op < 0 || op > 1);
+        } while (op < 0 || op > 2);
         return op;
     }
 

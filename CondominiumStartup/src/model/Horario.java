@@ -53,4 +53,8 @@ public class Horario {
             } else return false;
         } else return false;
     }
+
+    /*public Horario getHorario(Horario a, Horario b) {
+
+    }*/
 }

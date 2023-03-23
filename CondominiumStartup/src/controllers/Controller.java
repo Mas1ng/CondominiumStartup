@@ -3,6 +3,7 @@ package controllers;
 import model.Company;
 import model.Person;
 import views.*;
+import model.Condominio;
 
 import java.util.ArrayList;
 
@@ -52,11 +53,35 @@ public class Controller {
                         GeneralView.writeText("Alterado");
                     }
                     break;
+                case 2:
+                    //menu Condominio
+                    runCondominio();
+                    break;
                 default:
                     GeneralView.writeText("Opção Errada");
                     break;
             }
         } while (op != 0);
+    }
+
+    private void runCondominio() {
+        GeneralView.writeText("Menu Condominios\n");
+        int num = CondominioView.menuCondominio();
+        switch (num) {
+            case 0:
+                GeneralView.writeText("Volta para o menu anterior.");
+                break;
+            case 1:
+                CondominioView.createCondominio();
+                break;
+            case 2:
+                GeneralView.writeText("2 - alterar Condominio");
+                //
+                break;
+            default:
+                GeneralView.writeText("Opção Errada");
+                break;
+        } while (num != 0);
     }
 
     private void runPeople(Company company) {

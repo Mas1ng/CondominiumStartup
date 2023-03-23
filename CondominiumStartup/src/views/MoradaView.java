@@ -10,14 +10,9 @@ public class MoradaView {
         boolean flag;
         Morada morada = null;
         do {
-            try {
-                flag = false;
-                String s = GeneralView.getText("Morada");
-                morada = new Morada(s);
-            } catch (MoradaInvalidaException m) {
-                flag = true;
-                System.out.println("Atenção: "+ m.getMessage());
-            }
+            flag = false;
+            String s = GeneralView.getText("Morada: ");
+            morada = new Morada(s);
         } while (flag);
         return morada;
     }

@@ -8,7 +8,7 @@ public class Condominio implements Serializable {
     private Horario horaAbertura;
     private Horario horaFecho;
 
-    private String morada;
+    private Morada morada;
     private Employee funcionarioGestor;
 
 
@@ -36,11 +36,11 @@ public class Condominio implements Serializable {
         this.horaFecho = horaFecho;
     }
 
-    public String getMorada() {
+    public Morada getMorada() {
         return morada;
     }
 
-    public void setMorada(String morada) {
+    public void setMorada(Morada morada) {
         this.morada = morada;
     }
 
@@ -52,10 +52,11 @@ public class Condominio implements Serializable {
         this.funcionarioGestor = funcionarioGestor;
     }
 
-    public Condominio(Horario horaAbertura, Horario horaFecho, String morada, Employee funcionarioGestor) {
+    public Condominio(String nome, Horario horaAbertura, Horario horaFecho, Morada morada) {
+        this.nome = nome;
         this.horaAbertura = horaAbertura;
         this.horaFecho = horaFecho;
         this.morada = morada;
-        this.funcionarioGestor = funcionarioGestor;
     }
+
 }
