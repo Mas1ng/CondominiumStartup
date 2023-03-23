@@ -62,6 +62,15 @@ public class EmployeeList implements Serializable {
     public ArrayList<Employee> getAll() {
         return (ArrayList<Employee>) employees.clone();
     }
+
+    /*public ArrayList<Employee> compareNameEmployee(ArrayList<Employee> employees) {
+        for (int i=0;i<=employees.size();i++) {
+            String temp = employees.get(i);
+            if (temp.equals())
+    }
+}*/
+
+
     public ArrayList<Person> getNOldestPeople(int n) {
         boolean flag;
         ArrayList<Person> lista = new ArrayList<>();

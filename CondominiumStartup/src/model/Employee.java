@@ -6,6 +6,7 @@ import java.io.Serializable;
 
 public class Employee extends Person implements Serializable {
     private long numberEmployee;
+
     public Employee(String nome, Data nascimento, long numberEmployee) {
         super(nome, nascimento);
         setNumberEmployee(numberEmployee);
@@ -21,21 +22,21 @@ public class Employee extends Person implements Serializable {
     }
 
     public void setNumberEmployee(long numberEmployee) {
-        if(validNumber(numberEmployee)) {
+        if (validNumber(numberEmployee)) {
             this.numberEmployee = numberEmployee;
-        }else {
+        } else {
             throw new EmployeeInvalidNumberException(numberEmployee + ": Numero Funcionario inválido");
         }
     }
 
 
     private boolean validNumber(long number) {
-        return number >= 0 && number <= 9999;
+        return number >= 1000 && number <= 9999;
     }
 
-    public String getIntroducao(){
+    public String getIntroducao() {
         String intro;
-        intro = super.getIntroducao()+" - "+numberEmployee ;
+        intro = super.getIntroducao() + " - " + numberEmployee;
         return intro;
     }
 
@@ -49,3 +50,4 @@ public class Employee extends Person implements Serializable {
                 '}';
     }
 }
+
