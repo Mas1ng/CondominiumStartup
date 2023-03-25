@@ -44,6 +44,7 @@ public class EmployeeView {
                         f = EmployeeView.getEmployee();
                         employees = company.getEmployeeList();
                         employees.insert(f);
+                        company.setEmployeeList(employees);
                     }catch(Exception e){
                         System.out.println(e.getMessage());
                     }
@@ -87,6 +88,7 @@ public class EmployeeView {
                         Employee p = employees.remove(number);
                         System.out.println(p.getNome());
                         System.out.println(p);
+                        company.setEmployeeList(employees);
                     }catch(Exception e){
                         System.out.println(e.getMessage());
                     }

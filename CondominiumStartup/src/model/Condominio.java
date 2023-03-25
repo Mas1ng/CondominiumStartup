@@ -7,9 +7,11 @@ public class Condominio implements Serializable {
     private String nome;
     private Horario horaAbertura;
     private Horario horaFecho;
-
     private Morada morada;
     private Employee funcionarioGestor;
+    private float valorBase;
+    private FracaoList fracoes;
+
 
 
     public String getNome() {
@@ -59,4 +61,14 @@ public class Condominio implements Serializable {
         this.morada = morada;
     }
 
+    @Override
+    public String toString() {
+        return "Condominio{" +
+                "nome='" + nome + '\'' +
+                ", horaAbertura=" + horaAbertura +
+                ", horaFecho=" + horaFecho +
+                ", morada=" + morada +
+                ", funcionarioGestor=" + funcionarioGestor +
+                '}';
+    }
 }

@@ -50,8 +50,9 @@ public class Controller {
                 case 1:
                     Company b = CompanyView.changeCompany(company);
                     if(b!= null) {
-                        GeneralView.writeText("Alterado");
+                        GeneralView.writeText("Alterado\n");
                     }
+                    //Guardar em ficheiro as alterações
                     break;
                 case 2:
                     //menu Condominio
@@ -72,11 +73,14 @@ public class Controller {
                 GeneralView.writeText("Volta para o menu anterior.");
                 break;
             case 1:
-                CondominioView.createCondominio();
+                Condominio condominio = CondominioView.createCondominio();
+                if(condominio!= null) {
+                    GeneralView.writeText("Criado\n");
+                }
+                //Guardar comdominio novo em ficheiro
                 break;
             case 2:
-                GeneralView.writeText("2 - alterar Condominio");
-                //
+
                 break;
             default:
                 GeneralView.writeText("Opção Errada");
@@ -113,7 +117,7 @@ public class Controller {
             op = StatisticsView.menuStatistic();
             switch (op) {
                 case 0:
-                    GeneralView.writeText("Volta para o menu anterior.");
+                    GeneralView.writeText("Volta para o menu anterior.");// o que faz isto?
                     break;
                 case 1:
                     GeneralView.writeText("Os 5 funcionarios mais velhos");

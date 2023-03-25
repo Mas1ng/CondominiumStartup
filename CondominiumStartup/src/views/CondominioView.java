@@ -12,6 +12,7 @@ public class CondominioView {
         do {
         System.out.println("\nMenu Condominio");
         System.out.println("1 - Criar Condominio");
+        System.out.println("2 - Listar Condominios");
         System.out.println("\n0 - Voltar");
         op = (int) GeneralView.getNumber("--->");
     } while (op < 0 || op > 1);
@@ -21,15 +22,15 @@ public class CondominioView {
     public static Condominio createCondominio() {
         String nome = GeneralView.getText("Escreva o nome do Condominio");
         Morada morada = MoradaView.getMorada();
-        int horaa=GeneralView.getNumberInt("Escreva a hora de abertura: ");
-        int minutoa=GeneralView.getNumberInt("Escreva o minuto de abertura: ");
-        int horaf=GeneralView.getNumberInt("Escreva a hora de fecho: ");
-        int minutof=GeneralView.getNumberInt("Escreva o minuto de fecho: ");
-        Horario horaAbertura = new Horario(horaa, minutoa);
-        Horario horaFecho = new Horario(horaf, minutof);
+        Horario horaAbertura= HorarioView.getHorario("Horário de Abertura");
+        Horario horaFecho= HorarioView.getHorario("Horário de Fecho");
         Condominio condominio = new Condominio(nome, horaAbertura, horaFecho, morada);
         return condominio;
     }
+
+    /*public static Condominio listarCondominio() {
+
+    }*/
 
     /*public static Condominio changeCondominio(Condominio c) {
     }*/
