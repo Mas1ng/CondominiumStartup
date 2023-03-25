@@ -75,8 +75,7 @@ public class Controller {
                 CondominioView.createCondominio();
                 break;
             case 2:
-                GeneralView.writeText("2 - alterar Condominio");
-                //
+
                 break;
             default:
                 GeneralView.writeText("Opção Errada");

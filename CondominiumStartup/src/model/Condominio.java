@@ -59,4 +59,14 @@ public class Condominio implements Serializable {
         this.morada = morada;
     }
 
+    @Override
+    public String toString() {
+        return "Condominio{" +
+                "nome='" + nome + '\'' +
+                ", horaAbertura=" + horaAbertura +
+                ", horaFecho=" + horaFecho +
+                ", morada=" + morada +
+                ", funcionarioGestor=" + funcionarioGestor +
+                '}';
+    }
 }

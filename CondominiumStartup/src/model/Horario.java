@@ -1,6 +1,8 @@
 package model;
 
 import exception.HorarioInvalidoException;
+import views.GeneralView;
+
 import java.io.Serializable;
 
 public class Horario {
@@ -54,6 +56,12 @@ public class Horario {
         } else return false;
     }
 
+    public Horario criarHorario() {
+        int hora= GeneralView.getNumberInt("Escreva a hora de abertura: ");
+        int minuto=GeneralView.getNumberInt("Escreva o minuto de abertura: ");
+        Horario horario = new Horario(hora, minuto);
+        return horario;
+    }
     /*public Horario getHorario(Horario a, Horario b) {
 
     }*/
