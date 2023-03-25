@@ -36,22 +36,25 @@ public class CondominioList implements Serializable {
             throw new NonExistElement(nome+"");
         }
     }
-    public void change(long number, Employee employee){
-        Employee p = getEmployeeByNumber(number);
+    public void change(String name, Condominio condominio){
+        Condominio p = getCondominioByName(name);
         if (p != null) {
-            p.setNome(employee.getNome());
-            p.setNascimento(employee.getNascimento());
-            p.setNumberEmployee(employee.getNumberEmployee());
+            p.setNome(condominio.getNome());
+            p.setHoraAbertura(condominio.getHoraAbertura());
+            p.setHoraFecho(condominio.getHoraFecho());
+            p.setMorada(condominio.getMorada());
+            p.setFuncionarioGestor(condominio.getFuncionarioGestor());
+
         }else{
-            throw new NonExistElement(number+"");
+            throw new NonExistElement(name+"");
         }
     }
-    public Employee get(long number) {
-        Employee p = getEmployeeByNumber(number);
+    public Condominio get(String name) {
+        Condominio p = getCondominioByName(name);
         if (p != null) {
             return p;
         }else{
-            throw new NonExistElement(number +"");
+            throw new NonExistElement(name +"");
         }
     }
 }

@@ -11,6 +11,7 @@ public class Condominio implements Serializable {
     private Employee funcionarioGestor;
     private float valorBase;
     private FracaoList fracoes;
+    private Valencia valencias;
 
 
 
@@ -53,12 +54,15 @@ public class Condominio implements Serializable {
     public void setFuncionarioGestor(Employee funcionarioGestor) {
         this.funcionarioGestor = funcionarioGestor;
     }
+    public  (){
 
-    public Condominio(String nome, Horario horaAbertura, Horario horaFecho, Morada morada) {
+    }
+    public Condominio(String nome, Horario horaAbertura, Horario horaFecho, Morada morada/*String Valências*/) {
         this.nome = nome;
         this.horaAbertura = horaAbertura;
         this.horaFecho = horaFecho;
         this.morada = morada;
+
     }
 
     @Override
