@@ -9,7 +9,7 @@ public class Condominio implements Serializable {
     private Horario horaFecho;
     private Morada morada;
     private Employee funcionarioGestor;
-    private float valorBase;
+    private long valorBase;
     private FracaoList fracoes;
     private Valencia valencias;
 
@@ -54,14 +54,15 @@ public class Condominio implements Serializable {
     public void setFuncionarioGestor(Employee funcionarioGestor) {
         this.funcionarioGestor = funcionarioGestor;
     }
-    public  (){
-
+    public  getValorBase(ValorBase valorBase){
+//irei ter de criar uma classe com o valor base?
     }
-    public Condominio(String nome, Horario horaAbertura, Horario horaFecho, Morada morada/*String Valências*/) {
+    public Condominio(String nome, Horario horaAbertura, Horario horaFecho, Morada morada/*String Valências*/, Valencia valencias) {
         this.nome = nome;
         this.horaAbertura = horaAbertura;
         this.horaFecho = horaFecho;
         this.morada = morada;
+        this.valencias = valencias;
 
     }
 
@@ -72,7 +73,7 @@ public class Condominio implements Serializable {
                 ", horaAbertura=" + horaAbertura +
                 ", horaFecho=" + horaFecho +
                 ", morada=" + morada +
-                ", funcionarioGestor=" + funcionarioGestor +
+                ", funcionarioGestor=" + funcionarioGestor +" ,valência=" + valencias+
                 '}';
     }
 }

@@ -7,14 +7,14 @@ import java.io.Serializable;
 //import java.util.regex.Pattern;
 
 public class Valencia implements Serializable{
-    private String nome;
+    private String valencia;
     private float custo;
     public String getNome() {
-        return nome;
+        return valencia;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setNome(String name) {
+        this.valencia = name;
     }
 
     public float getCusto() {
