@@ -6,7 +6,17 @@ public class Fracoes implements Serializable {
     private String nome;
     private String piso;
     private long permilagem;
-    private String denominação;
+    private Person pessoaProprietária;
+
+    public Fracoes(String nome, String piso, long permilagem, Person pessoaProprietária) {
+        this.nome = nome;
+        this.piso = piso;
+        this.permilagem = permilagem;
+        this.pessoaProprietária = pessoaProprietária;
+    }
+
+
+
     public String getNamePiso() {
         return nome;
     }
@@ -14,6 +24,7 @@ public class Fracoes implements Serializable {
     public void setNamePiso(String nome) {
         this.nome = nome;
     }
+
     public String getPiso() {
         return piso;
     }
@@ -21,25 +32,30 @@ public class Fracoes implements Serializable {
     public void setPiso(String piso) {
         this.piso = piso;
     }
+
     public long getPermilagem() {
         return permilagem;
     }
 
     public void setPermilagem(long permilagem) {
-
         this.permilagem = permilagem;
     }
-    public String getDenominação(){return denominação;}
 
-    public void setDenominação(String denominação) {
-        this.denominação = denominação;
+    public String getNome() {
+        return nome;
     }
 
-    public String pessoaproprietaria(String nome, Data nascimento, String denominação) {
-        super(nome,nascimento);
-        setDenominação(denominação);
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
+    public Person getPessoaProprietária() {
+        return pessoaProprietária;
+    }
+
+    public void setPessoaProprietária(Person pessoaProprietária) {
+        this.pessoaProprietária = pessoaProprietária;
+    }
 }
 
 

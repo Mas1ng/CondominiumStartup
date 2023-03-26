@@ -13,6 +13,4 @@ public class ValenciaList implements Serializable {
         valencias = new ArrayList<>();
     }
 
-    private Employee getOrcamentoValencia(long orcamento){
-       orcamento=custo/fracoes;
-    }
+
