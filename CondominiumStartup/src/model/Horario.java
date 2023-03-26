@@ -5,7 +5,7 @@ import views.GeneralView;
 
 import java.io.Serializable;
 
-public class Horario {
+public class Horario implements Serializable {
     private int hora;
     private int minuto;
 

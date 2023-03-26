@@ -57,4 +57,9 @@ public class CondominioList implements Serializable {
             throw new NonExistElement(name +"");
         }
     }
+
+    public ArrayList<Condominio> getAll() {
+        return (ArrayList<Condominio>) condominios.clone();//o que é que isto faz?
+    }
+
 }

@@ -28,16 +28,18 @@ public class Main {
                 MockData mock = new MockData();
                 mock.generateData(company);
                 break;
+            case 0:
+                System.out.println("A cancelar...");
+                break;
             default:
                 GeneralView.writeText("Not an option");
         }
 
         if (company != null){
             Controller controller = new Controller(company);
-            controller.run();
+            company = controller.run();//caso haja empresa ele entra no run
+            FilesOperation.guardarDados(company);
         }
-
-        FilesOperation.guardarDados(company);
     }
 
 

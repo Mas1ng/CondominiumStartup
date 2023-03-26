@@ -5,11 +5,11 @@ import model.Contact;
 
 public class CompanyView {
 
-    public static int menuCompany() {
+    public static int menuCompany(String companyName) {
         System.out.println("Gerir Empresa de Condominios");
         int op;
         do {
-            System.out.println("\nMenu Condominium");
+            System.out.println("\nMenu da Empresa - " + companyName);
             System.out.println("1 - Alterar dados Empresa");
             System.out.println("2 - Menu Condominios");
             System.out.println("\n0 - Voltar");

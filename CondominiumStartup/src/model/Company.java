@@ -6,6 +6,7 @@ public class Company implements Serializable {
     public String nome;
     public Contact contact;
     EmployeeList employees;
+    CondominioList condominios; //associa uma lista de condomínios a uma empresa assim sendo guarda condominios
 
     //TODO: Fazer para condominios o que esta feito para empregados
 
@@ -16,6 +17,7 @@ public class Company implements Serializable {
         this.nome = nome;
         this.contact = contact;
         this.employees = new EmployeeList();
+        this.condominios = new CondominioList();
     }
     public String getNome(){
         return nome;
@@ -35,5 +37,13 @@ public class Company implements Serializable {
     }
     public void setEmployeeList(EmployeeList employees){
         this.employees = employees;
+    }
+
+    public CondominioList getCondominios() {
+        return condominios;
+    }
+
+    public void setCondominios(CondominioList condominios) {
+        this.condominios = condominios;
     }
 }

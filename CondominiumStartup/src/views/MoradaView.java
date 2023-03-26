@@ -11,7 +11,7 @@ public class MoradaView {
         Morada morada = null;
         do {
             flag = false;
-            String s = GeneralView.getText("Morada: ");
+            String s = GeneralView.getText("Morada");
             morada = new Morada(s);
         } while (flag);
         return morada;

@@ -12,7 +12,7 @@ import java.nio.file.Paths;
 import static java.nio.file.StandardOpenOption.CREATE;
 
 public class FilesOperation {
-    static String CONDOMINIUM_DATA = "condominium_data.dat";
+    static String CONDOMINIUM_DATA = "condominium_data_novo.dat";
     public static Company carregarDados(){
         Company company = new Company();
         Path file = Paths.get(CONDOMINIUM_DATA);
@@ -29,7 +29,7 @@ public class FilesOperation {
 
     public static void guardarDados(Company company) {
         Path file = Paths.get(CONDOMINIUM_DATA);
-        System.out.println("guardarDados");
+        System.out.println("A guardar dados...\n");
         try{
             ObjectOutputStream o = new ObjectOutputStream(Files.newOutputStream(file, CREATE));
             o.writeObject(company);

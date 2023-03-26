@@ -40,8 +40,7 @@ public class PersonView {
         do {
             System.out.println("\nMenu Pessoas");
             System.out.println("1 - Funcionarios");
-            System.out.println("2 - Moradores");
-            System.out.println("\n0 - Voltar");
+            System.out.println("0 - Voltar");
             op = (int) GeneralView.getNumber("--->");
         } while (op < 0 || op > 2);
         return op;

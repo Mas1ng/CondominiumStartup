@@ -87,7 +87,7 @@ public class Condominio implements Serializable {
                 ", horaAbertura=" + horaAbertura +
                 ", horaFecho=" + horaFecho +
                 ", morada=" + morada +
-                ", funcionarioGestor=" + funcionarioGestor +" ,valência=" + valencias+
+                ", funcionarioGestor=" + funcionarioGestor +
                 '}';
     }
 }

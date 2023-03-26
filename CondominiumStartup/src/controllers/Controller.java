@@ -1,34 +1,33 @@
 package controllers;
 
-import model.Company;
-import model.Person;
+import model.*;
 import views.*;
-import model.Condominio;
 
 import java.util.ArrayList;
 
 
 public class Controller {
-    private Company model;
+    private Company company;
+
     public Controller(Company company) {
-        this.model = company;
+        this.company = company;
     }
 
-    public void run() {
+    public Company run() {
         int op = -1;
         do {
             op = GeneralView.generalMenu();
             switch (op) {
                 case 1:
-                    runCompany(model);
+                    runCompany(company);
                     //CompanyView.mainCompany(model);
                     break;
                 case 2:
-                    runPeople(model);
+                    runPeople(company);
                     //PersonView.mainPeople(model);
                     break;
                 case 5:
-                    runStatistics(model);
+                    runStatistics(company);
                     //StatisticsView.mainStatistics(model);
                     break;
                 default:
@@ -36,23 +35,26 @@ public class Controller {
                     break;
             }
         } while (op != 0);
+        System.out.println(company.getNome());
+        System.out.println(company.getContact());
+        System.out.println(company.getCondominios());
+        return company;
 
     }
 
     private void runCompany(Company company) {
         int op;
         do {
-            op = CompanyView.menuCompany();
+            op = CompanyView.menuCompany(company.nome);
             switch (op) {
                 case 0:
                     GeneralView.writeText("Volta para o menu anterior.");
                     break;
                 case 1:
                     Company b = CompanyView.changeCompany(company);
-                    if(b!= null) {
+                    if (b != null) {
                         GeneralView.writeText("Alterado\n");
                     }
-                    //Guardar em ficheiro as alterações
                     break;
                 case 2:
                     //menu Condominio
@@ -68,24 +70,28 @@ public class Controller {
     private void runCondominio() {
         GeneralView.writeText("Menu Condominios\n");
         int num = CondominioView.menuCondominio();
+        Condominio condominio = null;
         switch (num) {
             case 0:
                 GeneralView.writeText("Volta para o menu anterior.");
                 break;
             case 1:
-                Condominio condominio = CondominioView.createCondominio();
-                if(condominio!= null) {
+                condominio = CondominioView.createCondominio();
+                if (condominio != null) {
                     GeneralView.writeText("Criado\n");
+                    company = CondominioView.addCondominio(company, condominio);
                 }
-                //Guardar comdominio novo em ficheiro
                 break;
             case 2:
-
+                //Criar funcao no CondominioView para listar condominis e mandar model como argumento
+                CondominioList condominios = company.getCondominios(); // o porquê de esta linha
+                ArrayList<Condominio> list = condominios.getAll();//same
+                CondominioView.printListCondominio(list);
                 break;
             default:
                 GeneralView.writeText("Opção Errada");
                 break;
-        } while (num != 0);
+            }
     }
 
     private void runPeople(Company company) {
@@ -99,9 +105,6 @@ public class Controller {
                     break;
                 case 1:
                     EmployeeView.mainEmployee(company);
-                    break;
-                case 2:
-                    //mainMoradores(condominium);
                     break;
                 default:
                     GeneralView.writeText("Opção Errada");
@@ -137,5 +140,4 @@ public class Controller {
 
         } while (op != 0);
     }
-
 }

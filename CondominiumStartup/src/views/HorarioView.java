@@ -26,4 +26,3 @@ public class HorarioView {
         return horario;
     }
     }
-//nao percebo o que isto está a fazer
