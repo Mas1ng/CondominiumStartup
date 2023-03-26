@@ -22,9 +22,8 @@ public class CondominioView {
     public static Condominio createCondominio() {
         String nome = GeneralView.getText("Escreva o nome do Condominio");
         Morada morada = MoradaView.getMorada();
-        Horario horaAbertura= HorarioView.getHorario();
-        Horario horaFecho= HorarioView.getHorario();
-
+        Horario horaAbertura= HorarioView.getHorario("Horário de Abertura");
+        Horario horaFecho= HorarioView.getHorario("Horário de Fecho");
         Condominio condominio = new Condominio(nome, horaAbertura, horaFecho, morada);
         return condominio;
     }

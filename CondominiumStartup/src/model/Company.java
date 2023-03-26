@@ -7,6 +7,8 @@ public class Company implements Serializable {
     public Contact contact;
     EmployeeList employees;
 
+    //TODO: Fazer para condominios o que esta feito para empregados
+
     public Company(){
         this.employees = new EmployeeList();
     }
@@ -30,5 +32,8 @@ public class Company implements Serializable {
 
     public EmployeeList getEmployeeList(){
         return this.employees;
+    }
+    public void setEmployeeList(EmployeeList employees){
+        this.employees = employees;
     }
 }

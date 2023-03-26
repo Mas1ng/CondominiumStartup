@@ -5,18 +5,19 @@ import model.Horario;
 
 public class HorarioView {
 
-    public static Horario getHorario() {
+    public static Horario getHorario(String label) {
         boolean flag;
-        Horario horario = null;
+        Horario horario = null;//?
         do {
             try {
                 flag = false;
-                System.out.println("Horario: ");
+                System.out.println(label + ": ");
 
-                int hora = (int) GeneralView.getNumber("Hora: ");
-                int minuto = (int) GeneralView.getNumber("Minuto: ");
+                int hora = (int) GeneralView.getNumber("Hora");
+                int minuto = (int) GeneralView.getNumber("Minuto");
 
                 horario = new Horario(hora, minuto);
+                System.out.println(horario);
             } catch (DataInvalidaException e) {
                 flag = true;
                 System.out.println("Atenção: "+ e.getMessage());
@@ -25,4 +26,4 @@ public class HorarioView {
         return horario;
     }
     }
-
+//nao percebo o que isto está a fazer

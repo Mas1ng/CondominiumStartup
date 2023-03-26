@@ -34,7 +34,7 @@ public class Horario {
     public String toString() {
         return "Horas: "+
                 hora+
-                ":"+
+               ":"+
                 minuto+
                 " ";
     }
@@ -53,13 +53,13 @@ public class Horario {
             if(minuto>=0  && hora <=60) {
                 return true;
             } else return false;
-        } else return false;
+        } else return false;   //fazes duas vezes else return false porquê?
     }
 
     public Horario criarHorario() {
         int hora= GeneralView.getNumberInt("Escreva a hora de abertura: ");
         int minuto=GeneralView.getNumberInt("Escreva o minuto de abertura: ");
-        Horario horario = new Horario(hora, minuto);
+        Horario horario = new Horario(hora, minuto);//o que faz isto?
         return horario;
     }
     /*public Horario getHorario(Horario a, Horario b) {

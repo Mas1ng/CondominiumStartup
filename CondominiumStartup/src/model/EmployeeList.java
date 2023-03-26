@@ -29,7 +29,7 @@ public class EmployeeList implements Serializable {
         if (p== null) {
             return employees.add(employee);
         }else{
-            throw new EmployeeDuplicatedNumberException(employee.getNumberEmployee()+"");
+            throw new EmployeeDuplicatedNumberException(employee.getNumberEmployee()+"");//qual a razão das aspas?
         }
     }
     public Employee remove(long number){
