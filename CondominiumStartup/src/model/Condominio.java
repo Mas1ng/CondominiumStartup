@@ -71,23 +71,25 @@ public class Condominio implements Serializable {
         this.horaFecho = horaFecho;
         this.morada = morada;
         this.valencias = valencias;
+        this.valorBase = valorBase;
     }
 
-    public Condominio(String nome, Horario horaAbertura, Horario horaFecho, Morada morada) {
+   /* public Condominio(String nome, Horario horaAbertura, Horario horaFecho, Morada morada) {
         this.nome = nome;
         this.horaAbertura = horaAbertura;
         this.horaFecho = horaFecho;
         this.morada = morada;
-    }
+    }*/
 
     @Override
     public String toString() {
         return "Condominio{" +
                 "nome='" + nome + '\'' +
-                ", horaAbertura=" + horaAbertura +
-                ", horaFecho=" + horaFecho +
+                ", hora de abertura=" + horaAbertura +
+                ", Hora de fecho=" + horaFecho +
                 ", morada=" + morada +
                 ", funcionarioGestor=" + funcionarioGestor +
+                ", valor base=" + valorBase +
                 '}';
     }
 }
